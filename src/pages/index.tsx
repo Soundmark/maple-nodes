@@ -4,15 +4,19 @@ import { useEffect, useMemo, useState } from "react";
 import "./index.less";
 import {
   MinusCircleIcon,
-  XCircleIcon,
+  PlusIcon,
   XMarkIcon,
 } from "@heroicons/react/20/solid";
+import Swal from "sweetalert2";
 
 export default function HomePage() {
   const [type, setType] = useState(Object.keys(data)[0]);
   const [job, setJob] = useState<string>();
-  const [needs, setNeeds] = useState<any>(new Array(9).fill(null));
+  const [needs, setNeeds] = useState<(null | string)[]>(
+    new Array(9).fill(null)
+  );
   const [isLock, setIsLock] = useState(false);
+  const [myNodes, setMyNodes] = useState<(null | string)[][]>([]);
 
   const jobOptions = useMemo(() => {
     const t = (data as any)[type];
@@ -88,6 +92,7 @@ export default function HomePage() {
           <div className="flex gap-2 flex-wrap">
             {skills.map((item) => (
               <div
+                key={item.name}
                 title={item.name}
                 className={
                   needs.includes(item.name) || isLock
@@ -119,7 +124,7 @@ export default function HomePage() {
           <div className="mb-2 text-lg font-bold text-[#f7fffc]">核心需求</div>
           <div className="flex items-center gap-2 flex-wrap">
             {needs.map((item, index) => (
-              <div className="relative w-10 h-10">
+              <div className="relative w-10 h-10" key={index}>
                 {item && (
                   <>
                     {!isLock && (
@@ -161,10 +166,37 @@ export default function HomePage() {
             <div
               className="button font-bold text-[#f7fffc] ml-2 px-2 py-1 w-20 rounded-md cursor-pointer text-sm"
               onClick={() => {
+                if (needs.filter(Boolean).length < 2) {
+                  Swal.fire({
+                    title: "至少需要选择两个核心",
+                    customClass: "maple-alert",
+                  });
+                  return;
+                }
                 setIsLock(!isLock);
               }}
             >
               {isLock ? "UNLOCK" : "LOCK"}
+            </div>
+          </div>
+        </div>
+
+        <div className="card mt-4">
+          <div className="mb-2 text-lg font-bold text-[#f7fffc]">我的核心</div>
+          <div className="flex gap-2">
+            <div className="flex gap-2 flex-col py-2 px-1 border rounded-md bg-[rgba(255,255,255,0.1)] border-[rgba(255,255,255,0.1)]">
+              <div
+                className={`w-10 h-10 bg-[#334c5c] rounded-md empty top-0 left-0`}
+              ></div>
+              <div
+                className={`w-10 h-10 bg-[#334c5c] rounded-md empty top-0 left-0`}
+              ></div>
+              <div
+                className={`w-10 h-10 bg-[#334c5c] rounded-md empty top-0 left-0`}
+              ></div>
+            </div>
+            <div className="py-2 px-1 rounded-md border bg-[rgba(255,255,255,0.1)] border-[rgba(255,255,255,0.1)] flex items-center">
+              <PlusIcon width={40} color="rgba(255,255,255,0.5)"></PlusIcon>
             </div>
           </div>
         </div>
