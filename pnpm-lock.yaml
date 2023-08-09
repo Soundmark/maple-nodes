@@ -6,11 +6,13 @@ specifiers:
   '@types/react': ^18.0.33
   '@types/react-dom': ^18.0.11
   '@umijs/plugins': ^4.0.74
+  sweetalert2: ^11.7.20
   tailwindcss: ^3
   typescript: ^5.0.3
   umi: ^4.0.74
 
 dependencies:
+  sweetalert2: 11.7.20
   umi: 4.0.74_76w62qazvw4d3vt7bdirp4waw4
 
 devDependencies:
@@ -8679,6 +8681,10 @@ packages:
       csso: 4.2.0
       picocolors: 1.0.0
       stable: 0.1.8
+    dev: false
+
+  /sweetalert2/11.7.20:
+    resolution: {integrity: sha512-GdU1TkiLpGGC0mcPV8bKmS7G0MR7caxambPkEU8zyepRSNR9EaEvIjNhX5QNkL0VFVzHbI3l12NtuEklkJ0D4Q==}
     dev: false
 
   /swr/2.2.0:

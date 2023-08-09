@@ -9,6 +9,7 @@
     "start": "npm run dev"
   },
   "dependencies": {
+    "sweetalert2": "^11.7.20",
     "umi": "^4.0.74"
   },
   "devDependencies": {
