@@ -9,14 +9,24 @@ import {
 } from "@heroicons/react/20/solid";
 import Swal from "sweetalert2";
 
+const needTypeArr = ["三核五技", "四核六技", "五核八技", "六核九技"];
+const skillNumMap = {
+  [needTypeArr[0]]: 5,
+  [needTypeArr[1]]: 6,
+  [needTypeArr[2]]: 8,
+  [needTypeArr[3]]: 9,
+};
+
 export default function HomePage() {
   const [type, setType] = useState(Object.keys(data)[0]);
   const [job, setJob] = useState<string>();
+  const [needType, setNeedType] = useState(needTypeArr[0]);
   const [needs, setNeeds] = useState<(null | string)[]>(
     new Array(9).fill(null)
   );
   const [isLock, setIsLock] = useState(false);
   const [myNodes, setMyNodes] = useState<string[][]>([]);
+  const [assistNode, setAssistNode] = useState<string | null>(null);
 
   const jobOptions = useMemo(() => {
     const t = (data as any)[type];
@@ -102,12 +112,18 @@ export default function HomePage() {
                 key={item.name}
                 title={item.name}
                 className={
-                  needs.includes(item.name) || isLock
+                  needs.includes(item.name) ||
+                  isLock ||
+                  needs.filter(Boolean).length === skillNumMap[needType]
                     ? "cursor-not-allowed grayscale"
                     : "cursor-pointer"
                 }
                 onClick={() => {
-                  if (needs.includes(item.name)) return;
+                  if (
+                    needs.includes(item.name) ||
+                    needs.filter(Boolean).length === skillNumMap[needType]
+                  )
+                    return;
                   const index = needs.findIndex((i) => i === null);
                   if (index !== -1) {
                     const newNeeds = [...needs];
@@ -128,7 +144,29 @@ export default function HomePage() {
         </div>
 
         <div className="card mt-4">
-          <div className="mb-2 text-lg font-bold text-[#f7fffc]">核心需求</div>
+          <div className="flex gap-2">
+            <div className="mb-2 mr-2 text-lg font-bold text-[#f7fffc]">
+              核心需求
+            </div>
+            {needTypeArr.map((type) => (
+              <div
+                className="mt-2 text-xs cursor-pointer h-5"
+                style={{
+                  color:
+                    type === needType
+                      ? "rgba(255,255,255,0.8)"
+                      : "rgba(255,255,255,0.5)",
+                  textShadow: type === needType ? "0 0 5px #1E94C4" : undefined,
+                }}
+                onClick={() => {
+                  if (myNodes.length) return;
+                  setNeedType(type);
+                }}
+              >
+                {type}
+              </div>
+            ))}
+          </div>
           <div className="flex items-center gap-2 flex-wrap">
             {needs.map((item, index) => (
               <div className="relative w-10 h-10">
@@ -156,7 +194,7 @@ export default function HomePage() {
                       }}
                       className="relative z-10"
                       onClick={() => {
-                        if (myNodes[myNodes.length - 1].length < 3) {
+                        if (myNodes?.[myNodes?.length - 1]?.length < 3) {
                           const newMyNodes = [...myNodes];
                           newMyNodes[myNodes.length - 1].push(item);
                           setMyNodes(newMyNodes);
@@ -167,11 +205,11 @@ export default function HomePage() {
                 )}
                 <div
                   className={`w-10 h-10 bg-[#334c5c] rounded-md ${
-                    isLock ? "" : "empty"
+                    index + 1 > skillNumMap[needType] ? "" : "empty"
                   } absolute top-0 left-0`}
                   style={{ opacity: item ? 0 : 1 }}
                 >
-                  {isLock && (
+                  {index + 1 > skillNumMap[needType] && (
                     <MinusCircleIcon color="#a5c1c8"></MinusCircleIcon>
                   )}
                 </div>
@@ -181,11 +219,11 @@ export default function HomePage() {
               className={`button ${
                 myNodes.length ? "disabled" : ""
               } font-bold text-[#f7fffc] ml-2 px-2 py-1 w-20 rounded-md text-sm cursor-pointer`}
-              onClick={() => {
+              onClick={async () => {
                 if (myNodes.length) return;
-                if (needs.filter(Boolean).length < 2) {
+                if (needs.filter(Boolean).length < skillNumMap[needType]) {
                   Swal.fire({
-                    title: "至少需要选择两个核心",
+                    title: "请先完善核心需求",
                     customClass: "maple-alert",
                   });
                   return;
