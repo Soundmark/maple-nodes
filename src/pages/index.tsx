@@ -16,7 +16,7 @@ export default function HomePage() {
     new Array(9).fill(null)
   );
   const [isLock, setIsLock] = useState(false);
-  const [myNodes, setMyNodes] = useState<(null | string)[][]>([]);
+  const [myNodes, setMyNodes] = useState<string[][]>([]);
 
   const jobOptions = useMemo(() => {
     const t = (data as any)[type];
@@ -62,6 +62,13 @@ export default function HomePage() {
     return null;
   }, [skills]);
 
+  /** 是否能够添加核心 */
+  const addable = useMemo(() => {
+    return (
+      isLock && (!myNodes.length || myNodes[myNodes.length - 1]?.length === 3)
+    );
+  }, [isLock, myNodes]);
+
   return (
     <div className="p-4">
       <div className="flex gap-4 mb-4">
@@ -90,7 +97,7 @@ export default function HomePage() {
             被动核心一览
           </div>
           <div className="flex gap-2 flex-wrap">
-            {skills.map((item) => (
+            {skills.map((item: any) => (
               <div
                 key={item.name}
                 title={item.name}
@@ -124,7 +131,7 @@ export default function HomePage() {
           <div className="mb-2 text-lg font-bold text-[#f7fffc]">核心需求</div>
           <div className="flex items-center gap-2 flex-wrap">
             {needs.map((item, index) => (
-              <div className="relative w-10 h-10" key={index}>
+              <div className="relative w-10 h-10">
                 {item && (
                   <>
                     {!isLock && (
@@ -148,6 +155,13 @@ export default function HomePage() {
                         cursor: isLock ? "pointer" : "default",
                       }}
                       className="relative z-10"
+                      onClick={() => {
+                        if (myNodes[myNodes.length - 1].length < 3) {
+                          const newMyNodes = [...myNodes];
+                          newMyNodes[myNodes.length - 1].push(item);
+                          setMyNodes(newMyNodes);
+                        }
+                      }}
                     ></img>
                   </>
                 )}
@@ -164,8 +178,11 @@ export default function HomePage() {
               </div>
             ))}
             <div
-              className="button font-bold text-[#f7fffc] ml-2 px-2 py-1 w-20 rounded-md cursor-pointer text-sm"
+              className={`button ${
+                myNodes.length ? "disabled" : ""
+              } font-bold text-[#f7fffc] ml-2 px-2 py-1 w-20 rounded-md text-sm cursor-pointer`}
               onClick={() => {
+                if (myNodes.length) return;
                 if (needs.filter(Boolean).length < 2) {
                   Swal.fire({
                     title: "至少需要选择两个核心",
@@ -183,20 +200,56 @@ export default function HomePage() {
 
         <div className="card mt-4">
           <div className="mb-2 text-lg font-bold text-[#f7fffc]">我的核心</div>
-          <div className="flex gap-2">
-            <div className="flex gap-2 flex-col py-2 px-1 border rounded-md bg-[rgba(255,255,255,0.1)] border-[rgba(255,255,255,0.1)]">
-              <div
-                className={`w-10 h-10 bg-[#334c5c] rounded-md empty top-0 left-0`}
-              ></div>
-              <div
-                className={`w-10 h-10 bg-[#334c5c] rounded-md empty top-0 left-0`}
-              ></div>
-              <div
-                className={`w-10 h-10 bg-[#334c5c] rounded-md empty top-0 left-0`}
-              ></div>
-            </div>
-            <div className="py-2 px-1 rounded-md border bg-[rgba(255,255,255,0.1)] border-[rgba(255,255,255,0.1)] flex items-center">
-              <PlusIcon width={40} color="rgba(255,255,255,0.5)"></PlusIcon>
+          <div className="flex gap-3">
+            {myNodes.map((item, index) => (
+              <div className="flex gap-2 flex-col py-2 px-1 border rounded-md bg-[rgba(255,255,255,0.1)] border-[rgba(255,255,255,0.1)] relative">
+                <div
+                  className="absolute -right-2 -top-2 bg-[#324c5c] rounded-full cursor-pointer border z-20"
+                  onClick={() => {
+                    const newMyNodes = [...myNodes];
+                    newMyNodes.splice(index, 1);
+                    setMyNodes(newMyNodes);
+                  }}
+                >
+                  <XMarkIcon width={13} color="#fff"></XMarkIcon>
+                </div>
+                {new Array(3)
+                  .fill(null)
+                  .map((_, subIndex) =>
+                    item[subIndex] ? (
+                      <img
+                        src={skillsMap[item[subIndex]].filePath}
+                        width={40}
+                        height={40}
+                        style={{ maxWidth: "none" }}
+                      ></img>
+                    ) : (
+                      <div
+                        className={`w-10 h-10 bg-[#334c5c] rounded-md empty top-0 left-0`}
+                      ></div>
+                    )
+                  )}
+              </div>
+            ))}
+            <div
+              className="py-2 px-1 rounded-md border bg-[rgba(255,255,255,0.1)] border-[rgba(255,255,255,0.1)] flex items-center"
+              style={{
+                cursor: addable ? "pointer" : "not-allowed",
+                height: 154,
+              }}
+              onClick={() => {
+                if (!addable) return;
+                const newMyNodes = [...myNodes];
+                newMyNodes.push([]);
+                setMyNodes(newMyNodes);
+              }}
+            >
+              <PlusIcon
+                width={40}
+                color={
+                  addable ? "rgba(255,255,255,1)" : "rgba(255,255,255,0.5)"
+                }
+              ></PlusIcon>
             </div>
           </div>
         </div>

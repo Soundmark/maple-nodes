@@ -24,9 +24,13 @@
   opacity: 0.6;
   border: 1px solid #fff;
   transition: 0.3s;
-  &:hover {
+  &:hover:not(.disabled) {
     opacity: 0.8;
   }
+}
+.disabled {
+  cursor: not-allowed;
+  filter: grayscale(1);
 }
 
 @keyframes bling {
