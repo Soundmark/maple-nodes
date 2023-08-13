@@ -7,6 +7,7 @@ export default defineConfig({
   npmClient: "pnpm",
   tailwindcss: {},
   hash: true,
+  history: { type: "hash" },
   publicPath: isDev ? "/" : "./",
   plugins: ["@umijs/plugins/dist/tailwindcss"],
 });
