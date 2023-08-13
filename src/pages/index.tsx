@@ -15,8 +15,11 @@ import _Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { calculate } from "./calculate";
 import { picObj } from "./pic";
+import { khaliSkill } from "./khali";
 
 const Swal = withReactContent(_Swal);
+// @ts-ignore
+data.翼人族.飞刃沙士 = khaliSkill;
 
 const needTypeArr = ["三核五技", "四核六技", "五核八技", "六核九技"];
 const skillNumMap = {
