@@ -238,18 +238,8 @@ export default function HomePage() {
                         <XMarkIcon width={13} color="#fff"></XMarkIcon>
                       </div>
                     )}
-                    <img
-                      src={skillsMap?.[item]?.filePath}
-                      width={40}
-                      height={40}
-                      style={{
-                        maxWidth: "none",
-                        cursor: isLock ? "pointer" : "default",
-                        filter: myNodes?.[myNodes?.length - 1]?.includes(item)
-                          ? "grayscale(1)"
-                          : undefined,
-                      }}
-                      className="relative z-10"
+                    <div
+                      className="cursor-pointer relative z-10"
                       onClick={() => {
                         if (
                           myNodes?.[myNodes?.length - 1]?.length < 3 &&
@@ -260,7 +250,20 @@ export default function HomePage() {
                           setMyNodes(newMyNodes);
                         }
                       }}
-                    ></img>
+                    >
+                      <img
+                        src={skillsMap?.[item]?.filePath}
+                        width={40}
+                        height={40}
+                        style={{
+                          maxWidth: "none",
+                          cursor: isLock ? "pointer" : "default",
+                          filter: myNodes?.[myNodes?.length - 1]?.includes(item)
+                            ? "grayscale(1)"
+                            : undefined,
+                        }}
+                      ></img>
+                    </div>
                   </>
                 )}
                 <div
