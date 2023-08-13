@@ -1,12 +1,15 @@
 {
   "private": true,
   "author": "郑家豪 <beatboxzjh@163.com>",
+  "homepage": "https://soundmark.github.io/maple-nodes",
   "scripts": {
     "dev": "umi dev",
     "build": "umi build",
     "postinstall": "umi setup",
     "setup": "umi setup",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "sweetalert2": "^11.7.20",
@@ -19,6 +22,7 @@
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
     "@umijs/plugins": "^4.0.74",
+    "gh-pages": "^6.0.0",
     "tailwindcss": "^3",
     "typescript": "^5.0.3"
   }
