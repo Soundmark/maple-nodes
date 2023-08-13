@@ -14,6 +14,7 @@ import {
 import _Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { calculate } from "./calculate";
+import { picObj } from "./pic";
 
 const Swal = withReactContent(_Swal);
 
@@ -117,7 +118,12 @@ export default function HomePage() {
   }, [myNodes]);
 
   return (
-    <div className="p-4 flex flex-col justify-center h-screen gap-6">
+    <div
+      className="p-4 flex flex-col justify-center min-h-screen gap-6"
+      style={{
+        background: `url(${picObj?.[job || type]}) no-repeat center / contain`,
+      }}
+    >
       <div className="flex gap-4 justify-center relative z-40">
         <div className="flex items-center">
           <div>职业群：</div>
@@ -127,15 +133,17 @@ export default function HomePage() {
             onChange={(v) => setType(v)}
           ></Select>
         </div>
-        <div className="flex items-center">
-          <div>职业：</div>
-          <Select
-            style={{ display: jobOptions.length ? "block" : "none" }}
-            value={job}
-            options={jobOptions}
-            onChange={(v) => setJob(v)}
-          ></Select>
-        </div>
+        {!!jobOptions.length && (
+          <div className="flex items-center">
+            <div>职业：</div>
+            <Select
+              style={{ display: jobOptions.length ? "block" : "none" }}
+              value={job}
+              options={jobOptions}
+              onChange={(v) => setJob(v)}
+            ></Select>
+          </div>
+        )}
       </div>
 
       <div className="content-box p-4">
@@ -228,7 +236,7 @@ export default function HomePage() {
                       </div>
                     )}
                     <img
-                      src={skillsMap[item]?.filePath}
+                      src={skillsMap?.[item]?.filePath}
                       width={40}
                       height={40}
                       style={{
