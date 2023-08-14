@@ -181,7 +181,7 @@ export default function HomePage() {
                 }}
               >
                 <img
-                  src={item.filePath}
+                  src={item?.filePath}
                   width={40}
                   height={40}
                   style={{ maxWidth: "none" }}
@@ -315,7 +315,7 @@ export default function HomePage() {
                                 className="round-md border-2 border-[#fff] focus:border-[#000] p-1 rounded-md"
                               >
                                 <img
-                                  src={skillsMap[item!].filePath}
+                                  src={skillsMap[item!]?.filePath}
                                   width={40}
                                   height={40}
                                   style={{
@@ -351,7 +351,7 @@ export default function HomePage() {
               <>
                 <div className="ml-2 text-white text-sm">次要技能:</div>
                 <img
-                  src={skillsMap[assistNode!].filePath}
+                  src={skillsMap[assistNode!]?.filePath}
                   width={40}
                   height={40}
                   style={{ maxWidth: "none" }}
@@ -386,7 +386,7 @@ export default function HomePage() {
                       item[subIndex] ? (
                         <img
                           key={subIndex}
-                          src={skillsMap[item[subIndex]].filePath}
+                          src={skillsMap[item[subIndex]]?.filePath}
                           width={40}
                           height={40}
                           style={{
@@ -493,7 +493,7 @@ export default function HomePage() {
                   {new Array(3).fill(null).map((_, subIndex) =>
                     item[subIndex] ? (
                       <img
-                        src={skillsMap[item[subIndex]].filePath}
+                        src={skillsMap[item[subIndex]]?.filePath}
                         width={40}
                         height={40}
                         style={{
