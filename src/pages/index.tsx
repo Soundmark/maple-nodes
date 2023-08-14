@@ -351,7 +351,7 @@ export default function HomePage() {
               <>
                 <div className="ml-2 text-white text-sm">次要技能:</div>
                 <img
-                  src={skillsMap[assistNode!]?.filePath}
+                  src={skillsMap?.[assistNode!]?.filePath}
                   width={40}
                   height={40}
                   style={{ maxWidth: "none" }}
@@ -386,7 +386,7 @@ export default function HomePage() {
                       item[subIndex] ? (
                         <img
                           key={subIndex}
-                          src={skillsMap[item[subIndex]]?.filePath}
+                          src={skillsMap?.[item[subIndex]]?.filePath}
                           width={40}
                           height={40}
                           style={{
