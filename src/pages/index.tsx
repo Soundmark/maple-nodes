@@ -519,7 +519,7 @@ export default function HomePage() {
               </div>
             )}
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-2">
             <div
               className={`button ${
                 myNodes.length ? "" : "disabled"
@@ -531,7 +531,7 @@ export default function HomePage() {
                     {},
                     1,
                     0,
-                    Math.round(needs.filter(Boolean).length / 2),
+                    Math.floor(needs.filter(Boolean).length / 2) + 1,
                     [],
                     assistNode
                   );
