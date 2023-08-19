@@ -1,5 +1,4 @@
 import Select from "@/components/Select";
-import data from "./data.json";
 import { useEffect, useMemo, useState } from "react";
 import "./index.less";
 import {
@@ -8,18 +7,16 @@ import {
   CubeTransparentIcon,
   MinusCircleIcon,
   PlusIcon,
-  TruckIcon,
   XMarkIcon,
 } from "@heroicons/react/20/solid";
 import _Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { calculate } from "./calculate";
-import { picObj } from "./pic";
-import { khaliSkill } from "./khali";
+import data1 from "./data1.json";
+import { typeObj, picObj } from "./config";
+import musheroom from "./stand.gif";
 
 const Swal = withReactContent(_Swal);
-// @ts-ignore
-data.翼人族.飞刃沙士 = khaliSkill;
 
 const needTypeArr = ["三核五技", "四核六技", "五核八技", "六核九技"];
 const skillNumMap = {
@@ -30,7 +27,7 @@ const skillNumMap = {
 };
 
 export default function HomePage() {
-  const [type, setType] = useState(Object.keys(data)[0]);
+  const [type, setType] = useState(Object.keys(typeObj)[0]);
   const [job, setJob] = useState<string>();
   const [needType, setNeedType] = useState(needTypeArr[0]);
   const [needs, setNeeds] = useState<(null | string)[]>(
@@ -75,11 +72,8 @@ export default function HomePage() {
   }, [needType, needs, isLock, myNodes, assistNode, nodePage]);
 
   const jobOptions = useMemo(() => {
-    const t = (data as any)[type];
-    if (!t.length) {
-      return Object.keys(t).map((key) => ({ name: key }));
-    }
-    return [];
+    const t = typeObj[type];
+    return t.map((item) => ({ name: item.chName + "(" + item.enName + ")" }));
   }, [type]);
 
   useEffect(() => {
@@ -92,12 +86,10 @@ export default function HomePage() {
 
   const skills = useMemo(() => {
     if (job) {
-      return data[type][job] || [];
-    } else if (data[type] instanceof Array) {
-      return data[type];
+      return data1[job.match(/(\w|\s|,)+/)![0]] || [];
     }
     return [];
-  }, [type, job]);
+  }, [job]);
 
   const skillsMap = useMemo(() => {
     if (skills.length) {
@@ -124,7 +116,9 @@ export default function HomePage() {
     <div
       className="p-4 flex flex-col justify-center min-h-screen gap-6"
       style={{
-        background: `url(${picObj?.[job || type]}) no-repeat center / contain`,
+        background: `url(${
+          picObj?.[job?.match(/(\w|\s|,)+/)![0]!]
+        }) no-repeat center / contain`,
       }}
     >
       <div className="flex gap-4 justify-center relative z-40">
@@ -132,7 +126,7 @@ export default function HomePage() {
           <div>职业群：</div>
           <Select
             value={type}
-            options={Object.keys(data).map((key) => ({ name: key }))}
+            options={Object.keys(typeObj).map((key) => ({ name: key }))}
             onChange={(v) => setType(v)}
           ></Select>
         </div>
@@ -181,7 +175,7 @@ export default function HomePage() {
                 }}
               >
                 <img
-                  src={item?.filePath}
+                  src={item?.pic}
                   width={40}
                   height={40}
                   style={{ maxWidth: "none" }}
@@ -252,7 +246,7 @@ export default function HomePage() {
                       }}
                     >
                       <img
-                        src={skillsMap?.[item]?.filePath}
+                        src={skillsMap?.[item]?.pic}
                         width={40}
                         height={40}
                         style={{
@@ -315,7 +309,7 @@ export default function HomePage() {
                                 className="round-md border-2 border-[#fff] focus:border-[#000] p-1 rounded-md"
                               >
                                 <img
-                                  src={skillsMap[item!]?.filePath}
+                                  src={skillsMap[item!]?.pic}
                                   width={40}
                                   height={40}
                                   style={{
@@ -351,7 +345,7 @@ export default function HomePage() {
               <>
                 <div className="ml-2 text-white text-sm">次要技能:</div>
                 <img
-                  src={skillsMap?.[assistNode!]?.filePath}
+                  src={skillsMap?.[assistNode!]?.pic}
                   width={40}
                   height={40}
                   style={{ maxWidth: "none" }}
@@ -386,7 +380,7 @@ export default function HomePage() {
                       item[subIndex] ? (
                         <img
                           key={subIndex}
-                          src={skillsMap?.[item[subIndex]]?.filePath}
+                          src={skillsMap?.[item[subIndex]]?.pic}
                           width={40}
                           height={40}
                           style={{
@@ -493,7 +487,7 @@ export default function HomePage() {
                   {new Array(3).fill(null).map((_, subIndex) =>
                     item[subIndex] ? (
                       <img
-                        src={skillsMap[item[subIndex]]?.filePath}
+                        src={skillsMap[item[subIndex]]?.pic}
                         width={40}
                         height={40}
                         style={{
@@ -551,6 +545,11 @@ export default function HomePage() {
               计算
             </div>
           </div>
+        </div>
+
+        <div className="mt-2 flex gap-4 items-center">
+          <img style={{transform: 'rotateY(180deg)'}} src={musheroom}></img>
+          <div className="text-white">Tips: 如果发现什么bug可以到我的<a className="text-yellow-300" href="https://github.com/Soundmark/maple-nodes">仓库</a>中给我提issue</div>
         </div>
       </div>
     </div>

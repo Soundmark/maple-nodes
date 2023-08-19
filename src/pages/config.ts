@@ -3,8 +3,8 @@ export const typeObj: Record<string, { enName: string; chName: string }[]> = {
     { enName: "Hero", chName: "英雄" },
     { enName: "Paladin", chName: "圣骑士" },
     { enName: "Dark Knight", chName: "黑骑士" },
-    { enName: "Magician (Fire, Poison)", chName: "火毒魔导师" },
-    { enName: "Magician (Ice, Lightning)", chName: "冰雷魔导师" },
+    { enName: "Fire, Poison", chName: "火毒" },
+    { enName: "Ice, Lightning", chName: "冰雷" },
     { enName: "Bishop", chName: "主教" },
     { enName: "Bowmaster", chName: "神射手" },
     { enName: "Marksman", chName: "箭神" },
@@ -31,8 +31,8 @@ export const typeObj: Record<string, { enName: string; chName: string }[]> = {
     { enName: "Dawn Warrior", chName: "魂骑士" },
     { enName: "Blaze Wizard", chName: "炎术士" },
     { enName: "Wind Archer", chName: "风灵使者" },
-    { enName: "Night Walker", chName: "奇袭者" },
-    { enName: "Thunder Breaker", chName: "杰特" },
+    { enName: "Night Walker", chName: "夜行者" },
+    { enName: "Thunder Breaker", chName: "奇袭者" },
   ],
   冒险岛英雄: [
     { enName: "Aran", chName: "战神" },
@@ -70,12 +70,12 @@ export const typeObj: Record<string, { enName: string; chName: string }[]> = {
   ],
 };
 
-export const pic = {
+export const picObj: Record<string, string> = {
   Hero: "https://i.imgur.com/1ulnMH2.png",
   Paladin: "https://i.imgur.com/vVhcVdt.png",
   "Dark Knight": "https://i.imgur.com/k3H59GT.png",
-  "Magician (Fire, Poison)": "https://i.imgur.com/h7k1JgT.png",
-  "Magician (Ice, Lightning)": "https://i.imgur.com/CRSiEzP.png",
+  "Fire, Poison": "https://i.imgur.com/h7k1JgT.png",
+  "Ice, Lightning": "https://i.imgur.com/CRSiEzP.png",
   Bishop: "https://i.imgur.com/MZFCKgQ.png",
   Bowmaster: "https://i.imgur.com/XnFSqtX.png",
   Marksman: "https://i.imgur.com/pDTDdtb.png",
@@ -103,8 +103,8 @@ export const pic = {
   "Battle Mage": "https://i.imgur.com/cxVBV52.png",
   "Wild Hunter": "https://i.imgur.com/MDls3MJ.png",
   Mechanic: "https://i.imgur.com/1RizClQ.png",
-  "Demon Slayer": "https://i.imgur.com/i85U7Xc.png",
-  "Demon Avenger": "https://i.imgur.com/bIJuGqM.png",
+  "Demon Slayer": "https://i.imgur.com/bIJuGqM.png",
+  "Demon Avenger": "https://i.imgur.com/i85U7Xc.png",
   Xenon: "https://i.imgur.com/hO0swBz.png",
   Kaiser: "https://i.imgur.com/nghL0r9.png",
   Kain: "https://i.imgur.com/2b11nee.png",
