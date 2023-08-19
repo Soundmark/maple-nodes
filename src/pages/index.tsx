@@ -15,7 +15,7 @@ import { calculate } from "./calculate";
 import data1 from "./data1.json";
 import { typeObj, picObj } from "./config";
 import musheroom from "./stand.gif";
-import thanks from './thanks.jpeg'
+import thanks from "./thanks.jpeg";
 
 const Swal = withReactContent(_Swal);
 
@@ -514,7 +514,7 @@ export default function HomePage() {
               </div>
             )}
           </div>
-          <div className="flex justify-center mt-2">
+          <div className="flex justify-center mt-2 gap-2">
             <div
               className={`button ${
                 myNodes.length ? "" : "disabled"
@@ -545,6 +545,30 @@ export default function HomePage() {
             >
               计算
             </div>
+            <div
+              className={`button font-bold text-[#f7fffc] px-2 py-1 w-20 rounded-md text-sm cursor-pointer`}
+              onClick={() => {
+                Swal.fire({
+                  title: "确认清空数据？",
+                  showCancelButton: true,
+                }).then((res) => {
+                  if (res.isConfirmed) {
+                    setNeeds(new Array(9).fill(null));
+                    setIsLock(false);
+                    setMyNodes([]);
+                    setAssistNode(null);
+                    setNodePage(1);
+                    const _cache = JSON.parse(
+                      localStorage.getItem("cache") || "{}"
+                    );
+                    delete _cache[job!];
+                    localStorage.setItem("cache", JSON.stringify(_cache));
+                  }
+                });
+              }}
+            >
+              清空数据
+            </div>
           </div>
         </div>
 
@@ -559,12 +583,19 @@ export default function HomePage() {
             >
               github仓库
             </a>
-            中给我提issue，如果觉得好用并且想鼓励一下作者的话可以给作者的仓库点个小星星或者给作者一点<span className="text-yellow-300 cursor-pointer" onClick={()=>{
-              Swal.fire({
-                title: <img src={thanks}></img>,
-                showConfirmButton: false
-              })
-            }}>打赏</span>🥺。
+            中给我提issue，如果觉得好用并且想鼓励一下作者的话可以给作者的仓库点个小星星或者给作者一点
+            <span
+              className="text-yellow-300 cursor-pointer"
+              onClick={() => {
+                Swal.fire({
+                  title: <img src={thanks}></img>,
+                  showConfirmButton: false,
+                });
+              }}
+            >
+              打赏
+            </span>
+            🥺。
           </div>
         </div>
       </div>
