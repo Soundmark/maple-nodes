@@ -15,6 +15,7 @@ import { calculate } from "./calculate";
 import data1 from "./data1.json";
 import { typeObj, picObj } from "./config";
 import musheroom from "./stand.gif";
+import thanks from './thanks.jpeg'
 
 const Swal = withReactContent(_Swal);
 
@@ -548,8 +549,23 @@ export default function HomePage() {
         </div>
 
         <div className="mt-2 flex gap-4 items-center">
-          <img style={{transform: 'rotateY(180deg)'}} src={musheroom}></img>
-          <div className="text-white">Tips: 如果发现什么bug可以到我的<a className="text-yellow-300" href="https://github.com/Soundmark/maple-nodes">仓库</a>中给我提issue</div>
+          <img style={{ transform: "rotateY(180deg)" }} src={musheroom}></img>
+          <div className="text-white">
+            Tips: 如果发现什么bug可以到我的
+            <a
+              target="_blank"
+              className="text-yellow-300"
+              href="https://github.com/Soundmark/maple-nodes"
+            >
+              github仓库
+            </a>
+            中给我提issue，如果觉得好用并且想鼓励一下作者的话可以给作者的仓库点个小星星或者给作者一点<span className="text-yellow-300 cursor-pointer" onClick={()=>{
+              Swal.fire({
+                title: <img src={thanks}></img>,
+                showConfirmButton: false
+              })
+            }}>打赏</span>🥺。
+          </div>
         </div>
       </div>
     </div>
