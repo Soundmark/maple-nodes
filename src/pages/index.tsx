@@ -26,6 +26,12 @@ const skillNumMap = {
   [needTypeArr[2]]: 8,
   [needTypeArr[3]]: 9,
 };
+const skillForNodeMap: Record<number, number> = {
+  5: 3,
+  6: 4,
+  8: 5,
+  9: 6,
+};
 
 export default function HomePage() {
   const [type, setType] = useState(Object.keys(typeObj)[0]);
@@ -208,6 +214,16 @@ export default function HomePage() {
                   // 四核六核六核九清除次要技能
                   if (type === needTypeArr[1] || type === needTypeArr[3]) {
                     setAssistNode(null);
+                  }
+                  if (needs.filter(Boolean).length > skillNumMap[type]) {
+                    setNeeds(
+                      needs.map((item, index) => {
+                        if (index + 1 > skillNumMap[type]) {
+                          return null;
+                        }
+                        return item;
+                      })
+                    );
                   }
                   setNeedType(type);
                 }}
@@ -526,7 +542,7 @@ export default function HomePage() {
                     {},
                     1,
                     0,
-                    Math.floor(needs.filter(Boolean).length / 2) + 1,
+                    skillForNodeMap[needs.filter(Boolean).length],
                     [],
                     assistNode
                   );
