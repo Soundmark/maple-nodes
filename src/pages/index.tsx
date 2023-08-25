@@ -387,7 +387,7 @@ export default function HomePage() {
                       className="absolute -right-2 -top-2 bg-[#324c5c] rounded-full cursor-pointer border z-20"
                       onClick={() => {
                         const newMyNodes = [...myNodes];
-                        newMyNodes.splice(index, 1);
+                        newMyNodes.splice((nodePage - 1) * 12 + index, 1);
                         setMyNodes(newMyNodes);
                       }}
                     >
