@@ -123,3 +123,66 @@ export const picObj: Record<string, string> = {
   Kinesis: "https://i.imgur.com/8n4cOR8.png",
   "Mo Xuan": "https://i.imgur.com/YoErUGN.png",
 };
+
+type Language = Record<
+  string,
+  {
+    jobType: Record<string, string>;
+    jobgroup: string;
+    job: string;
+    boostnodes: string;
+    "3n5s": string;
+    "4n6s": string;
+    "5n8s": string;
+    "6n9s": string;
+    requirement: string;
+    result: string;
+  }
+>;
+
+export const language: Language = {
+  en: {
+    jobType: {
+      冒险家: "Explorers",
+      反抗者: "Resistance",
+      希纳斯骑士团: "Cygnus Knights",
+      冒险岛英雄: "Heroes",
+      诺巴族: "Nova",
+      翼人族: "Flora",
+      晓之阵: "Sengoku",
+      阿尼玛: "Anima",
+      其他: "Others",
+    },
+    jobgroup: "JobGroup",
+    job: "Job",
+    boostnodes: "Boost Nodes",
+    "3n5s": "3Trios5Skills",
+    "4n6s": "4Trios6Skills",
+    "5n8s": "5Trios8Skills",
+    "6n9s": "6Trios9Skills",
+    requirement: "Node Requirement",
+    result: "Calculation Result",
+  },
+  ch: {
+    jobType: {
+      冒险家: "冒险家",
+      反抗者: "反抗者",
+      希纳斯骑士团: "希纳斯骑士团",
+      冒险岛英雄: "冒险岛英雄",
+      诺巴族: "诺巴族",
+      翼人族: "翼人族",
+      晓之阵: "晓之阵",
+      阿尼玛: "阿尼玛",
+      其他: "其他",
+    },
+    jobgroup: "职业群",
+    job: "职业",
+    boostnodes: "被动核心一览",
+    "3n5s": "三核五技",
+    "4n6s": "四核六技",
+    "5n8s": "五核八技",
+    "6n9s": "六核九技",
+    requirement: "核心需求",
+    result: "计算结果",
+  },
+};

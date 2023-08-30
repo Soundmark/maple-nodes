@@ -13,7 +13,7 @@ import _Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { calculate } from "./calculate";
 import data1 from "./data1.json";
-import { typeObj, picObj } from "./config";
+import { typeObj, picObj, language } from "./config";
 import musheroom from "./stand.gif";
 import thanks from "./thanks.jpeg";
 
@@ -32,6 +32,7 @@ const skillForNodeMap: Record<number, number> = {
   8: 5,
   9: 6,
 };
+const languageType: "ch" | "en" = "ch";
 
 export default function HomePage() {
   const [type, setType] = useState(Object.keys(typeObj)[0]);
@@ -78,9 +79,31 @@ export default function HomePage() {
     }
   }, [needType, needs, isLock, myNodes, assistNode, nodePage]);
 
+  const jobTypeObj = useMemo(() => {
+    if (languageType === "ch") {
+      return typeObj;
+    }
+    const obj: typeof typeObj = {};
+    Object.keys(typeObj).forEach((key) => {
+      obj[language[languageType].jobType[key]] = typeObj[key];
+    });
+    return obj;
+  }, []);
+
+  useEffect(() => {
+    setType(Object.keys(jobTypeObj)[0]);
+  }, [jobTypeObj]);
+
   const jobOptions = useMemo(() => {
-    const t = typeObj[type];
-    return t.map((item) => ({ name: item.chName + "(" + item.enName + ")" }));
+    const t = jobTypeObj[type];
+    return (
+      t?.map((item) => ({
+        name:
+          languageType === "ch"
+            ? item.chName + "(" + item.enName + ")"
+            : item.enName,
+      })) || []
+    );
   }, [type]);
 
   useEffect(() => {
@@ -93,7 +116,7 @@ export default function HomePage() {
 
   const skills = useMemo(() => {
     if (job) {
-      return data1[job.match(/(\w|\s|,)+/)![0]] || [];
+      return (data1 as any)[job.match(/(\w|\s|,)+/)![0]] || [];
     }
     return [];
   }, [job]);
@@ -130,16 +153,16 @@ export default function HomePage() {
     >
       <div className="flex gap-4 justify-center relative z-40">
         <div className="flex items-center">
-          <div>职业群：</div>
+          <div className="text-white">{language[languageType].jobgroup}：</div>
           <Select
             value={type}
-            options={Object.keys(typeObj).map((key) => ({ name: key }))}
+            options={Object.keys(jobTypeObj).map((key) => ({ name: key }))}
             onChange={(v) => setType(v)}
           ></Select>
         </div>
         {!!jobOptions.length && (
           <div className="flex items-center">
-            <div>职业：</div>
+            <div className="text-white">{language[languageType].job}：</div>
             <Select
               style={{ display: jobOptions.length ? "block" : "none" }}
               value={job}
@@ -325,18 +348,21 @@ export default function HomePage() {
                                 }}
                                 className="round-md border-2 border-[#fff] focus:border-[#000] p-1 rounded-md"
                               >
-                                <img
-                                  src={skillsMap[item!]?.pic}
-                                  width={40}
-                                  height={40}
-                                  style={{
-                                    maxWidth: "none",
-                                  }}
-                                  className="relative z-10 cursor-pointer"
+                                <div
                                   onClick={() => {
                                     t = item;
                                   }}
-                                ></img>
+                                >
+                                  <img
+                                    src={skillsMap[item!]?.pic}
+                                    width={40}
+                                    height={40}
+                                    style={{
+                                      maxWidth: "none",
+                                    }}
+                                    className="relative z-10 cursor-pointer"
+                                  ></img>
+                                </div>
                               </div>
                             );
                           })}
