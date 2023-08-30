@@ -10,7 +10,7 @@ interface P {
 }
 
 export default function Select({ options, value, onChange, style }: P) {
-  const [selected, setSelected] = useState(options[0]?.name);
+  const [selected, setSelected] = useState(value);
 
   useEffect(() => {
     if (value) {
@@ -20,7 +20,7 @@ export default function Select({ options, value, onChange, style }: P) {
 
   useEffect(() => {
     if (selected !== value) {
-      onChange?.(selected);
+      onChange?.(selected!);
     }
   }, [selected]);
 
