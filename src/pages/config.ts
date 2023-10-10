@@ -131,12 +131,23 @@ type Language = Record<
     jobgroup: string;
     job: string;
     boostnodes: string;
-    "3n5s": string;
-    "4n6s": string;
-    "5n8s": string;
-    "6n9s": string;
+    三核五技: string;
+    四核六技: string;
+    五核八技: string;
+    六核九技: string;
     requirement: string;
+    mynodes: string;
     result: string;
+    modaltips1: string;
+    modaltips2: string;
+    modaltips3: string;
+    viceskill: string;
+    calculate: string;
+    cleardata: string;
+    resulthint1: string;
+    resulthint2: string;
+    tips: string[];
+    [key: string]: any;
   }
 >;
 
@@ -156,12 +167,26 @@ export const language: Language = {
     jobgroup: "JobGroup",
     job: "Job",
     boostnodes: "Boost Nodes",
-    "3n5s": "3Trios5Skills",
-    "4n6s": "4Trios6Skills",
-    "5n8s": "5Trios8Skills",
-    "6n9s": "6Trios9Skills",
+    三核五技: "3Trios5Skills",
+    四核六技: "4Trios6Skills",
+    五核八技: "5Trios8Skills",
+    六核九技: "6Trios9Skills",
     requirement: "Node Requirement",
+    mynodes: "My Trios",
     result: "Calculation Result",
+    modaltips1: "Please replenish the node requirement first",
+    modaltips2: "Select a vice skill",
+    modaltips3: "Are you sure to clear the data?",
+    viceskill: "vice skill",
+    calculate: "calculate",
+    cleardata: "clear data",
+    resulthint1: "Empty",
+    resulthint2: "No perfect group",
+    tips: [
+      "If you find any bug, you can go to my ",
+      "github repository ",
+      "and make an issue",
+    ],
   },
   ch: {
     jobType: {
@@ -178,11 +203,21 @@ export const language: Language = {
     jobgroup: "职业群",
     job: "职业",
     boostnodes: "被动核心一览",
-    "3n5s": "三核五技",
-    "4n6s": "四核六技",
-    "5n8s": "五核八技",
-    "6n9s": "六核九技",
+    三核五技: "三核五技",
+    四核六技: "四核六技",
+    五核八技: "五核八技",
+    六核九技: "六核九技",
     requirement: "核心需求",
+    mynodes: "我的核心",
     result: "计算结果",
+    modaltips1: "请先完善核心需求",
+    modaltips2: "选择一个次要技能",
+    modaltips3: "确认清空数据？",
+    viceskill: "次要技能",
+    calculate: "计算",
+    cleardata: "清空数据",
+    resulthint1: "空空如也",
+    resulthint2: "没有完美组合",
+    tips: ["如果发现什么bug可以到我的", "github仓库", "中给我提issue"],
   },
 };

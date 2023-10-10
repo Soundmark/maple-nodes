@@ -32,7 +32,6 @@ const skillForNodeMap: Record<number, number> = {
   8: 5,
   9: 6,
 };
-const languageType: "ch" | "en" = "ch";
 
 export default function HomePage() {
   const [type, setType] = useState(Object.keys(typeObj)[0]);
@@ -46,7 +45,10 @@ export default function HomePage() {
   const [assistNode, setAssistNode] = useState<string | null>(null);
   const [nodePage, setNodePage] = useState(1);
   const [result, setResult] = useState<string[][]>([]);
-  const [resultHint, setResultHint] = useState("空空如也");
+  const [languageType, setLanguageType] = useState<"ch" | "en">("ch");
+  const [resultHint, setResultHint] = useState(
+    language[languageType].resulthint1
+  );
 
   useEffect(() => {
     // 缓存处理
@@ -88,7 +90,7 @@ export default function HomePage() {
       obj[language[languageType].jobType[key]] = typeObj[key];
     });
     return obj;
-  }, []);
+  }, [languageType]);
 
   useEffect(() => {
     setType(Object.keys(jobTypeObj)[0]);
@@ -142,6 +144,17 @@ export default function HomePage() {
     return new Array(Math.ceil((myNodes.length || 1) / 12)).fill(0);
   }, [myNodes]);
 
+  useEffect(() => {
+    if (
+      resultHint === language.en.resulthint1 ||
+      resultHint === language.ch.resulthint1
+    ) {
+      setResultHint(language[languageType].resulthint1);
+    } else {
+      setResultHint(language[languageType].resulthint2);
+    }
+  }, [languageType]);
+
   return (
     <div
       className="p-4 flex flex-col justify-center min-h-screen gap-6"
@@ -151,9 +164,11 @@ export default function HomePage() {
         }) no-repeat center / contain`,
       }}
     >
-      <div className="flex gap-4 justify-center relative z-40">
+      <div className="flex gap-4 justify-center relative z-40 items-center">
         <div className="flex items-center">
-          <div className="text-white">{language[languageType].jobgroup}：</div>
+          <div className="text-white w-24 text-right">
+            {language[languageType].jobgroup}：
+          </div>
           <Select
             value={type}
             options={Object.keys(jobTypeObj).map((key) => ({ name: key }))}
@@ -162,7 +177,9 @@ export default function HomePage() {
         </div>
         {!!jobOptions.length && (
           <div className="flex items-center">
-            <div className="text-white">{language[languageType].job}：</div>
+            <div className="text-white w-12 text-right">
+              {language[languageType].job}：
+            </div>
             <Select
               style={{ display: jobOptions.length ? "block" : "none" }}
               value={job}
@@ -171,12 +188,30 @@ export default function HomePage() {
             ></Select>
           </div>
         )}
+        <div className="flex rounded-md overflow-hidden border border-solid border-white text-white">
+          <div
+            className={`cursor-pointer px-2 py-1 border-0 border-r border-solid border-white bg-slate-500 ${
+              languageType === "en" ? "grayscale" : ""
+            }`}
+            onClick={() => setLanguageType("ch")}
+          >
+            中文
+          </div>
+          <div
+            className={`cursor-pointer px-2 py-1 bg-slate-500 ${
+              languageType === "ch" ? "grayscale" : ""
+            }`}
+            onClick={() => setLanguageType("en")}
+          >
+            English
+          </div>
+        </div>
       </div>
 
       <div className="content-box p-4">
         <div className="card">
           <div className="mb-2 text-lg font-bold text-[#f7fffc]">
-            被动核心一览
+            {language[languageType].boostnodes}
           </div>
           <div className="flex gap-2 flex-wrap">
             {skills.map((item: any) => (
@@ -218,7 +253,7 @@ export default function HomePage() {
         <div className="card mt-4">
           <div className="flex gap-2">
             <div className="mb-2 mr-2 text-lg font-bold text-[#f7fffc]">
-              核心需求
+              {language[languageType].requirement}
             </div>
             {needTypeArr.map((type) => (
               <div
@@ -251,7 +286,7 @@ export default function HomePage() {
                   setNeedType(type);
                 }}
               >
-                {type}
+                {language[languageType][type]}
               </div>
             ))}
           </div>
@@ -320,7 +355,7 @@ export default function HomePage() {
                 if (myNodes.length) return;
                 if (needs.filter(Boolean).length < skillNumMap[needType]) {
                   Swal.fire({
-                    title: "请先完善核心需求",
+                    title: language[languageType].modaltips1,
                     customClass: "maple-alert",
                   });
                   return;
@@ -334,7 +369,9 @@ export default function HomePage() {
                   await Swal.fire({
                     title: (
                       <div>
-                        <div className="mb-2">选择一个次要技能</div>
+                        <div className="mb-2">
+                          {language[languageType].modaltips2}
+                        </div>
                         <div className="flex gap-2 justify-center">
                           {needs.filter(Boolean).map((item, index) => {
                             return (
@@ -386,7 +423,9 @@ export default function HomePage() {
             </div>
             {assistNode && (
               <>
-                <div className="ml-2 text-white text-sm">次要技能:</div>
+                <div className="ml-2 text-white text-sm">
+                  {language[languageType].viceskill}:
+                </div>
                 <img
                   src={skillsMap?.[assistNode!]?.pic}
                   width={40}
@@ -399,7 +438,9 @@ export default function HomePage() {
         </div>
 
         <div className="card mt-4">
-          <div className="mb-2 text-lg font-bold text-[#f7fffc]">我的核心</div>
+          <div className="mb-2 text-lg font-bold text-[#f7fffc]">
+            {language[languageType].mynodes}
+          </div>
           <div className="flex justify-between">
             <div className="flex gap-3">
               {myNodes
@@ -519,7 +560,9 @@ export default function HomePage() {
         </div>
 
         <div className="card mt-4">
-          <div className="mb-2 text-lg font-bold text-[#f7fffc]">计算结果</div>
+          <div className="mb-2 text-lg font-bold text-[#f7fffc]">
+            {language[languageType].result}
+          </div>
           <div className="flex gap-3 mt-2 justify-center h-[153px]">
             {result.length ? (
               result.map((item, index) => (
@@ -527,22 +570,17 @@ export default function HomePage() {
                   key={index}
                   className="flex gap-2 flex-col py-2 px-1 border rounded-md bg-[rgba(255,255,255,0.1)] border-[rgba(255,255,255,0.1)] relative"
                 >
-                  {new Array(3).fill(null).map((_, subIndex) =>
-                    item[subIndex] ? (
-                      <img
-                        src={skillsMap[item[subIndex]]?.pic}
-                        width={40}
-                        height={40}
-                        style={{
-                          maxWidth: "none",
-                        }}
-                      ></img>
-                    ) : (
-                      <div
-                        className={`w-10 h-10 bg-[#334c5c] rounded-md empty top-0 left-0`}
-                      ></div>
-                    )
-                  )}
+                  {new Array(3).fill(null).map((_, subIndex) => (
+                    <img
+                      key={subIndex}
+                      src={skillsMap[item[subIndex]]?.pic}
+                      width={40}
+                      height={40}
+                      style={{
+                        maxWidth: "none",
+                      }}
+                    ></img>
+                  ))}
                 </div>
               ))
             ) : (
@@ -580,18 +618,18 @@ export default function HomePage() {
                     setResult(arr);
                   } else {
                     setResult([]);
-                    setResultHint("没有完美组合");
+                    setResultHint(language[languageType].resulthint2);
                   }
                 }
               }}
             >
-              计算
+              {language[languageType].calculate}
             </div>
             <div
-              className={`button font-bold text-[#f7fffc] px-2 py-1 w-20 rounded-md text-sm cursor-pointer`}
+              className={`button font-bold text-[#f7fffc] px-2 py-1 w-[88px] rounded-md text-sm cursor-pointer`}
               onClick={() => {
                 Swal.fire({
-                  title: "确认清空数据？",
+                  title: language[languageType].modaltips3,
                   showCancelButton: true,
                 }).then((res) => {
                   if (res.isConfirmed) {
@@ -609,7 +647,7 @@ export default function HomePage() {
                 });
               }}
             >
-              清空数据
+              {language[languageType].cleardata}
             </div>
           </div>
         </div>
@@ -617,16 +655,17 @@ export default function HomePage() {
         <div className="mt-2 flex gap-4 items-center">
           <img style={{ transform: "rotateY(180deg)" }} src={musheroom}></img>
           <div className="text-white">
-            Tips: 如果发现什么bug可以到我的
+            Tips: {language[languageType].tips[0]}
             <a
               target="_blank"
               className="text-yellow-300"
               href="https://github.com/Soundmark/maple-nodes"
             >
-              github仓库
+              {language[languageType].tips[1]}
             </a>
-            中给我提issue，如果觉得好用并且想鼓励一下作者的话可以给作者的仓库点个小星星或者给作者一点
-            <span
+            {language[languageType].tips[2]}
+            {/* ，如果觉得好用并且想鼓励一下作者的话可以给作者的仓库点个小星星或者给作者一点 */}
+            {/* <span
               className="text-yellow-300 cursor-pointer"
               onClick={() => {
                 Swal.fire({
@@ -636,7 +675,7 @@ export default function HomePage() {
               }}
             >
               打赏
-            </span>
+            </span> */}
             🥺。
           </div>
         </div>
