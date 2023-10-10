@@ -3,7 +3,7 @@ import { defineConfig } from "umi";
 const isDev = process.env.NODE_ENV === "development";
 
 export default defineConfig({
-  title: "核心计算器",
+  title: "Boost nodes calculator",
   favicons: ["./favicon.ico"],
   routes: [{ path: "/", component: "index" }],
   npmClient: "pnpm",
@@ -23,6 +23,18 @@ export default defineConfig({
     s.parentNode.insertBefore(hm, s);
   })();
   `,
+    },
+  ],
+  metas: [
+    {
+      name: "keywords",
+      content:
+        "maplestory, boost nodes, calculator, 冒险岛, 枫之谷, 核心计算器",
+    },
+    {
+      name: "description",
+      content:
+        "A calculator designed for filtering perfect boost nodes. 用于计算完美核心的核心计算器。",
     },
   ],
 });

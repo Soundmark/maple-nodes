@@ -45,7 +45,9 @@ export default function HomePage() {
   const [assistNode, setAssistNode] = useState<string | null>(null);
   const [nodePage, setNodePage] = useState(1);
   const [result, setResult] = useState<string[][]>([]);
-  const [languageType, setLanguageType] = useState<"ch" | "en">("ch");
+  const [languageType, setLanguageType] = useState<"ch" | "en">(
+    navigator.language === "zh-CN" ? "ch" : "en"
+  );
   const [resultHint, setResultHint] = useState(
     language[languageType].resulthint1
   );
