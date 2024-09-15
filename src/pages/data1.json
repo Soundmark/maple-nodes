@@ -1745,51 +1745,47 @@
   ],
   "Angelic Buster": [
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/c/c5/Skill_Soul_Buster.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Soul_Buster.png",
       "name": "Soul Buster Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/7/77/Skill_Star_Bubble.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Star_Bubble.png",
       "name": "Star Bubble Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/f/f7/Skill_Lovely_Sting.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Lovely_Sting.png",
       "name": "Lovely Sting Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/8/89/Skill_Pink_Pummel.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Pink_Pummel.png",
       "name": "Pink Pummel Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/2/2c/Skill_Soul_Seeker.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Soul_Seeker.png",
       "name": "Soul Seeker Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/4/49/Skill_Shining_Star_Burst.png",
-      "name": "Shining Star Burst Boost"
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Star_Crash.png",
+      "name": "Star Crash Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/3/3d/Skill_Heavenly_Crash.png",
-      "name": "Heavenly Crash Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/0/0d/Skill_Celestial_Roar.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Celestial_Roar.png",
       "name": "Celestial Roar Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/8/8a/Skill_Trinity.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Trinity.png",
       "name": "Trinity Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/e/ed/Skill_Finale_Ribbon.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Finale_Ribbon.png",
       "name": "Finale Ribbon Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/c/c0/Skill_Soul_Resonance.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Soul_Resonance.png",
       "name": "Soul Resonance Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/0/0b/Skill_Supreme_Supernova.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Supreme_Supernova.png",
       "name": "Supreme Supernova Boost"
     }
   ],
@@ -2139,72 +2135,6 @@
     {
       "pic": "https://static.wikia.nocookie.net/maplestory/images/e/e4/Skill_Talisman_Clone.png",
       "name": "Clone Boost"
-    }
-  ],
-  "Beast Tamer": [
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/2/21/Skill_Paw_Swipe.png",
-      "name": "Paw Swipe/Furious Strikes Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/1/15/Skill_Deep_Breath.png",
-      "name": "Deep Breath / Majestic Trumpet Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/a/a4/Skill_Really_Deep_Breath.png",
-      "name": "Really Deep Breath/Fort Follow-Up Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/7/74/Skill_Lil_Fort.png",
-      "name": "Lil Fort Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/e/e9/Skill_Fishy_Slap.png",
-      "name": "Fishy Slap Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/2/24/Skill_Table_Flip.png",
-      "name": "Table Flip Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/1/17/Skill_Leopard%27s_Paw.png",
-      "name": "Leopard's Paw/Leopard's Roar Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/5/59/Skill_Macho_Dance.png",
-      "name": "Macho Dance/Macho Slam/Macho Incarnate Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/d/d5/Skill_Thunder_Dash.png",
-      "name": "Thunder Dash/Thunder Trail Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/b/b2/Skill_Three-Point_Pounce.png",
-      "name": "Three-Point Pounce Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/5/59/Skill_Party_Time.png",
-      "name": "Party Time Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/5/5e/Skill_Formation_Attack.png",
-      "name": "Formation Attack/Baby Bombers Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/c/c2/Skill_Tornado_Flight.png",
-      "name": "Tornado Flight / Defensive Formation Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/c/cf/Skill_Friend_Launcher.png",
-      "name": "Friend Launcher Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/a/a3/Skill_Fire_Kitty%21.png",
-      "name": "Fire Kitty! Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/6/68/Skill_Group_Bear_Blaster.png",
-      "name": "Group Bear Blaster Boost"
     }
   ],
   "Lynn": [
