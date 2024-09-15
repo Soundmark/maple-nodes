@@ -64,6 +64,7 @@ export const typeObj: Record<string, { enName: string; chName: string }[]> = {
   ],
   其他: [
     { enName: "Beast Tamer", chName: "林之灵" },
+    { enName: "Lynn", chName: "琳恩" },
     { enName: "Zero", chName: "神之子" },
     { enName: "Kinesis", chName: "超能力者" },
     { enName: "Mo Xuan", chName: "墨玄" },
@@ -119,6 +120,7 @@ export const picObj: Record<string, string> = {
   Lara: "https://i.imgur.com/iHpj5PU.png",
   Hoyoung: "https://i.imgur.com/5c1WC61.png",
   "Beast Tamer": "https://i.imgur.com/RP77CZ1.png",
+  Lynn: "https://i.imgur.com/Pb9RPK2.png",
   Zero: "https://i.imgur.com/JAeSKjo.png",
   Kinesis: "https://i.imgur.com/8n4cOR8.png",
   "Mo Xuan": "https://i.imgur.com/YoErUGN.png",

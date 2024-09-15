@@ -2207,6 +2207,32 @@
       "name": "Group Bear Blaster Boost"
     }
   ],
+  "Lynn": [
+    {
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Peck_%284th_Job%29.png?20240502015145",
+      "name": "Peck Boost"
+    },
+    {
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Earth_Pulverization.png",
+      "name": "Earth Pulverization and Roar Boost"
+    },
+    {
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Predator%27s_Blow.png",
+      "name": "Predator's Blow and Raid Boost"
+    },
+    {
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Sneak_Attack.png",
+      "name": "Sneak Attack"
+    },
+    {
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Sweep.png",
+      "name": "Sweep and Whirlwind Boost"
+    },
+    {
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Strike_%284th_Job%29.png",
+      "name": "Strike Boost"
+    }
+  ],
   "Zero": [
     {
       "pic": "https://static.wikia.nocookie.net/maplestory/images/7/71/Skill_Moon_Strike.png",
