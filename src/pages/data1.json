@@ -941,56 +941,44 @@
   ],
   "Aran": [
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/e/e0/Skill_Smash_Wave.png",
-      "name": "Smash Wave Boost"
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Smash_Swing.png",
+      "name": "Smash Swing and Permafrost Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/e/e9/Skill_Smash_Swing.png",
-      "name": "Smash Swing Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/2/25/Skill_Final_Charge.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Final_Charge.png",
       "name": "Final Charge Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/8/87/Skill_Final_Attack.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Final_Attack.png",
       "name": "Final Attack Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/9/91/Skill_Final_Toss.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Final_Toss.png",
       "name": "Final Toss Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/d/d7/Skill_Rolling_Spin.png",
-      "name": "Rolling Spin Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/1/1d/Skill_Judgment_Draw_%28Aran%29.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Judgment_Draw_%28Aran%29.png",
       "name": "Judgment Draw Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/a/a4/Skill_Gathering_Hook.png",
-      "name": "Gathering Hook Boost"
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Adrenaline_Rush.png",
+      "name": "Adrenaline Rush and Adrenaline Overload Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/c/cc/Skill_Final_Blow.png",
-      "name": "Final Blow Boost"
-    },
-    {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/1/19/Skill_Beyond_Blade.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Beyond_Blade_%283%29.png",
       "name": "Beyond Blade Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/4/4a/Skill_Finisher_-_Storm_of_Fear.png",
-      "name": "Finisher - Storm of Fear Boost"
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Glacial_Prison.png",
+      "name": "Glacial Prison Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/f/f5/Skill_Finisher_-_Hunter%27s_Prey.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Finisher_-_Hunter%27s_Prey.png",
       "name": "Finisher - Hunter's Prey Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/4/46/Skill_Maha%27s_Domain.png",
-      "name": "Maha's Domain Boost"
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Hyper_Finisher_-_Last_Stand.png",
+      "name": "Hyper Finisher - Last Stand Boost"
     }
   ],
   "Evan": [
@@ -1195,63 +1183,63 @@
   ],
   "Shade": [
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/5/52/Skill_Flash_Fist.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Flash_Fist.png",
       "name": "Flash Fist Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/9/94/Skill_Ground_Pound.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Ground_Pound.png",
       "name": "Ground Pound Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/b/b1/Skill_Blade_Imp_-_Downward_Slash.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Blade_Imp_-_Downward_Slash.png",
       "name": "Blade Imp - Downward Slash Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/2/28/Skill_Blade_Imp_-_Forward_Slash.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Blade_Imp_-_Forward_Slash.png",
       "name": "Blade Imp - Forward Slash Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/5/5a/Skill_Fox_Spirits.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Fox_Spirits.png",
       "name": "Fox Spirits Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/7/7d/Skill_Shockwave_Punch.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Shockwave_Punch.png",
       "name": "Shockwave Punch Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/5/53/Skill_Blade_Imp_-_Spin_Slash.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Blade_Imp_-_Spin_Slash.png",
       "name": "Blade Imp - Spin Slash Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/6/60/Skill_Spirit_Frenzy.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Spirit_Frenzy.png",
       "name": "Spirit Frenzy Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/1/16/Skill_Spirit_Trap.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Spirit_Trap.png",
       "name": "Spirit Trap Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/f/fa/Skill_Summon_Other_Spirit.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Summon_Other_Spirit.png",
       "name": "Spirit Redemption Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/b/ba/Skill_Bomb_Punch.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Bomb_Punch.png",
       "name": "Bomb Punch Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/c/c8/Skill_Spirit_Claw.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Spirit_Claw.png",
       "name": "Spirit Claw Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/6/69/Skill_Death_Mark.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Death_Mark.png",
       "name": "Death Mark Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/1/15/Skill_Soul_Splitter.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Soul_Splitter.png",
       "name": "Soul Splitter Boost"
     },
     {
-      "pic": "https://static.wikia.nocookie.net/maplestory/images/7/7a/Skill_Spirit_Incarnation.png",
+      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Spirit_Incarnation.png",
       "name": "Spirit Incarnation Boost"
     }
   ],
