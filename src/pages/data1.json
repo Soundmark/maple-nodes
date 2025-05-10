@@ -941,43 +941,43 @@
   ],
   "Aran": [
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Smash_Swing.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/aran/smash-swing.png",
       "name": "Smash Swing and Permafrost Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Final_Charge.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/aran/final-charge.png",
       "name": "Final Charge Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Final_Attack.png",
+      "pic": "https://grandislibrary.com/class-icons/common/final-attack.png",
       "name": "Final Attack Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Final_Toss.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/aran/final-toss.png",
       "name": "Final Toss Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Judgment_Draw_%28Aran%29.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/aran/judgment-draw.png",
       "name": "Judgment Draw Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Adrenaline_Rush.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/aran/adrenaline-rush.png",
       "name": "Adrenaline Rush and Adrenaline Overload Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Beyond_Blade_%283%29.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/aran/beyond-blade-3.png",
       "name": "Beyond Blade Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Glacial_Prison.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/aran/glacial-prison.png",
       "name": "Glacial Prison Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Finisher_-_Hunter%27s_Prey.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/aran/hunters-prey.png",
       "name": "Finisher - Hunter's Prey Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Hyper_Finisher_-_Last_Stand.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/aran/last-stand.png",
       "name": "Hyper Finisher - Last Stand Boost"
     }
   ],
@@ -1183,63 +1183,55 @@
   ],
   "Shade": [
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Flash_Fist.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/shade/flash-fist.png",
       "name": "Flash Fist Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Ground_Pound.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/shade/ground-pound.png",
       "name": "Ground Pound Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Blade_Imp_-_Downward_Slash.png",
-      "name": "Blade Imp - Downward Slash Boost"
+      "pic": "https://grandislibrary.com/class-icons/heroes/shade/blade-imp-forward-slash.png",
+      "name": "Blade Imp Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Blade_Imp_-_Forward_Slash.png",
-      "name": "Blade Imp - Forward Slash Boost"
-    },
-    {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Fox_Spirits.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/shade/fox-spirits.png",
       "name": "Fox Spirits Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Shockwave_Punch.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/shade/shockwave-punch.png",
       "name": "Shockwave Punch Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Blade_Imp_-_Spin_Slash.png",
-      "name": "Blade Imp - Spin Slash Boost"
-    },
-    {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Spirit_Frenzy.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/shade/spirit-frenzy.png",
       "name": "Spirit Frenzy Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Spirit_Trap.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/shade/spirit-trap.png",
       "name": "Spirit Trap Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Summon_Other_Spirit.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/shade/summon-other-spirit.png",
       "name": "Spirit Redemption Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Bomb_Punch.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/shade/bomb-punch.png",
       "name": "Bomb Punch Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Spirit_Claw.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/shade/spirit-claw.png",
       "name": "Spirit Claw Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Death_Mark.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/shade/death-mark.png",
       "name": "Death Mark Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Soul_Splitter.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/shade/soul-splitter.png",
       "name": "Soul Splitter Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Spirit_Incarnation.png",
+      "pic": "https://grandislibrary.com/class-icons/heroes/shade/spirit-incarnation.png",
       "name": "Spirit Incarnation Boost"
     }
   ],
@@ -1733,47 +1725,47 @@
   ],
   "Angelic Buster": [
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Soul_Buster.png",
+      "pic": "https://grandislibrary.com/class-icons/nova/angelic-buster/soul-buster.png",
       "name": "Soul Buster Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Star_Bubble.png",
+      "pic": "https://grandislibrary.com/class-icons/nova/angelic-buster/star-bubble.png",
       "name": "Star Bubble Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Lovely_Sting.png",
+      "pic": "https://grandislibrary.com/class-icons/nova/angelic-buster/lovely-sting.png",
       "name": "Lovely Sting Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Pink_Pummel.png",
+      "pic": "https://grandislibrary.com/class-icons/nova/angelic-buster/pink-pummel.png",
       "name": "Pink Pummel Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Soul_Seeker.png",
+      "pic": "https://grandislibrary.com/class-icons/nova/angelic-buster/soul-seeker.png",
       "name": "Soul Seeker Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Star_Crash.png",
+      "pic": "https://grandislibrary.com/class-icons/nova/angelic-buster/star-crash.png",
       "name": "Star Crash Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Celestial_Roar.png",
+      "pic": "https://grandislibrary.com/class-icons/nova/angelic-buster/celestial-roar.png",
       "name": "Celestial Roar Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Trinity.png",
+      "pic": "https://grandislibrary.com/class-icons/nova/angelic-buster/trinity.png",
       "name": "Trinity Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Finale_Ribbon.png",
+      "pic": "https://grandislibrary.com/class-icons/nova/angelic-buster/finale-ribbon.png",
       "name": "Finale Ribbon Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Soul_Resonance.png",
+      "pic": "https://grandislibrary.com/class-icons/nova/angelic-buster/soul-resonance.png",
       "name": "Soul Resonance Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Supreme_Supernova.png",
+      "pic": "https://grandislibrary.com/class-icons/nova/angelic-buster/supreme-supernova.png",
       "name": "Supreme Supernova Boost"
     }
   ],
@@ -2127,27 +2119,27 @@
   ],
   "Lynn": [
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Peck_%284th_Job%29.png?20240502015145",
+      "pic": "https://grandislibrary.com/class-icons/jianghu/lynn/peck-3.png",
       "name": "Peck Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Earth_Pulverization.png",
+      "pic": "https://grandislibrary.com/class-icons/jianghu/lynn/earth-pulverization.png",
       "name": "Earth Pulverization and Roar Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Predator%27s_Blow.png",
+      "pic": "https://grandislibrary.com/class-icons/jianghu/lynn/predators-blow.png",
       "name": "Predator's Blow and Raid Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Sneak_Attack.png",
+      "pic": "https://grandislibrary.com/class-icons/jianghu/lynn/sneak-attack.png",
       "name": "Sneak Attack"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Sweep.png",
+      "pic": "https://grandislibrary.com/class-icons/jianghu/lynn/sweep.png",
       "name": "Sweep and Whirlwind Boost"
     },
     {
-      "pic": "https://media.maplestorywiki.net/yetidb/Skill_Strike_%284th_Job%29.png",
+      "pic": "https://grandislibrary.com/class-icons/jianghu/lynn/strike-4.png",
       "name": "Strike Boost"
     }
   ],
@@ -2249,40 +2241,44 @@
   ],
   "Mo Xuan": [
     {
-      "pic": "https://patchwiki.biligame.com/images/maplestory/0/05/le62qb6xex9ianfn0g7sgl5yek81ppd.png",
-      "name": "神功：破碎拳"
+      "pic": "https://grandislibrary.com/class-icons/jianghu/mo-xuan/xuanshan-arts-tian.png",
+      "name": "Xuanshan Arts [Tian] Boost"
     },
     {
-      "pic": "https://patchwiki.biligame.com/images/maplestory/d/df/j5z8g5entdjmd2fu8m2zj4m4ypbjhr8.png",
-      "name": "神功：旋风脚"
+      "pic": "https://grandislibrary.com/class-icons/jianghu/mo-xuan/xuanshan-arts-di.png",
+      "name": "Xuanshan Arts [Di] Boost"
     },
     {
-      "pic": "https://patchwiki.biligame.com/images/maplestory/c/cc/j966rsw9f8hbbmcqk5yhmhsihdaxzlm.png",
-      "name": "神功：铁山靠"
+      "pic": "https://grandislibrary.com/class-icons/jianghu/mo-xuan/divine-art-erupting-flame.png",
+      "name": "Divine Art: Erupting Flame Boost"
     },
     {
-      "pic": "https://patchwiki.biligame.com/images/maplestory/2/2b/7s6eovpl3hc5zx2mbwp4jc7wp90vgey.png",
-      "name": "神功：乱拳连击"
+      "pic": "https://grandislibrary.com/class-icons/jianghu/mo-xuan/divine-art-swirling-tide.png",
+      "name": "Divine Art: Swirling Tide Boost"
     },
     {
-      "pic": "https://patchwiki.biligame.com/images/maplestory/8/82/h88sufnls8ozgwc8oee33mfufbsck07.png",
-      "name": "神功：无影脚"
+      "pic": "https://grandislibrary.com/class-icons/jianghu/mo-xuan/divine-art-righteous-thunder.png",
+      "name": "Divine Art: Righteous Thunder Boost"
     },
     {
-      "pic": "https://patchwiki.biligame.com/images/maplestory/7/78/d925krumz1ebie32rbfzho5ls3hjgt3.png",
-      "name": "秘技：千斤锤"
+      "pic": "https://grandislibrary.com/class-icons/jianghu/mo-xuan/divine-art-howling-storm.png",
+      "name": "Divine Art: Howling Storm Boost"
     },
     {
-      "pic": "https://patchwiki.biligame.com/images/maplestory/f/f3/3aaa1yfvvl619cshp5gqtewg0cvqi2f.png",
-      "name": "神功：大地崩裂"
+      "pic": "https://grandislibrary.com/class-icons/jianghu/mo-xuan/secret-art-qi-disruption.png",
+      "name": "Secret Art: Qi Disruption Boost"
     },
     {
-      "pic": "https://patchwiki.biligame.com/images/maplestory/2/21/fxcs3yiiqi1zi4wdnljdcew7uk3k3o0.png",
-      "name": "神功：移形换位"
+      "pic": "https://grandislibrary.com/class-icons/jianghu/mo-xuan/divine-art-tearing-wind.png",
+      "name": "Divine Art: Tearing Wind Boost"
     },
     {
-      "pic": "https://patchwiki.biligame.com/images/maplestory/6/61/nd8irexxpqn5px31hbk2yfjwv7wy67d.png",
-      "name": "真气：焦热破神击"
+      "pic": "https://grandislibrary.com/class-icons/jianghu/mo-xuan/secret-art-qi-projection.png",
+      "name": "Secret Art: Qi Projection Boost"
+    },
+    {
+      "pic": "https://grandislibrary.com/class-icons/jianghu/mo-xuan/soul-art-black-wind.png",
+      "name": "Soul Art: Black Wind Boost"
     }
   ]
 }
