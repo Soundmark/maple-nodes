@@ -2280,5 +2280,51 @@
       "pic": "https://grandislibrary.com/class-icons/jianghu/mo-xuan/soul-art-black-wind.png",
       "name": "Soul Art: Black Wind Boost"
     }
+  ],
+  "Sia": [
+    {
+      "pic": "https://grandislibrary.com/class-icons/star-guardian/sia/ray.png",
+      "name": "Ray Boost"
+    },
+    {
+      "pic": "https://grandislibrary.com/class-icons/star-guardian/sia/ray.png",
+      "name": "Ray Boost"
+    },
+    {
+      "pic": "https://grandislibrary.com/class-icons/star-guardian/sia/boom.png",
+      "name": "Boom Boost"
+    },
+    {
+      "pic": "https://grandislibrary.com/class-icons/star-guardian/sia/pole.png",
+      "name": "Pole Boost"
+    },
+    {
+      "pic": "https://grandislibrary.com/class-icons/star-guardian/sia/starlight.png",
+      "name": "Starlight Boost"
+    },
+    {
+      "pic": "https://grandislibrary.com/class-icons/star-guardian/sia/stellar-i-antares.png",
+      "name": "Stellar I - Antares Boost"
+    },
+    {
+      "pic": "https://grandislibrary.com/class-icons/star-guardian/sia/stellar-ii-algol.png",
+      "name": "Stellar II - Algol Boost"
+    },
+    {
+      "pic": "https://grandislibrary.com/class-icons/star-guardian/sia/stellar-v-fomalhaut.png",
+      "name": "Stellar V - Fomalhaut Boost"
+    },
+    {
+      "pic": "https://grandislibrary.com/class-icons/star-guardian/sia/stellar-vi-izar.png",
+      "name": "Stellar VI - Lzar Boost"
+    },
+    {
+      "pic": "https://grandislibrary.com/class-icons/star-guardian/sia/stellar-vii-vega.png",
+      "name": "Stellar VII - Vega Boost"
+    },
+    {
+      "pic": "https://grandislibrary.com/class-icons/star-guardian/sia/stellar-ix-canopus.png",
+      "name": "Stellar IX - Canopus Boost"
+    }
   ]
 }
