@@ -67,6 +67,7 @@ export const typeObj: Record<string, { enName: string; chName: string }[]> = {
     { enName: "Zero", chName: "神之子" },
     { enName: "Kinesis", chName: "超能力者" },
     { enName: "Mo Xuan", chName: "墨玄" },
+    { enName: "Sia", chName: "施亚" },
   ],
 };
 
